@@ -8,3 +8,9 @@ cd fft
 ./fft
 
 1,1,1,1,1,1,1,1 (for example)
+
+TODO:
+-inverse fft 
+-convolution 
+-image processing  
+
