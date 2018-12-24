@@ -2,20 +2,28 @@ import Data.List.Split
 import Data.Bits
 
 main = do
-	putStrLn ("Input a list of integers delimited by \",\"")
+	putStrLn ("Input desired function: fft, ifft")
+	fun <- getLine
 	listNums <- readNumList
 	let len = (length listNums)
 	if (((.&.) len (len - 1)) == 0) --checks if list length is power of 2
-		then print (fft listNums)
+		then    --print (listNums)
+		if (fun == "fft") then print (fft listNums)
+		else if	(fun == "ifft") then print (ifft listNums)
+		else putStrLn ("invalid function")
 	else putStrLn ("List length must be a power of 2")
 
 --Read in a string, turn into list, turn into tuples
 --Tuples here represent complex values (Re, Im)
 readNumList = do
-	line <- getLine
-	let strList = splitOn "," line
-	return (map toRealTuple strList)
-toRealTuple s = ((read s :: Float) , 0)
+	putStrLn ("Input a list of real floats delimited by \",\"")
+	realFloat <- getLine
+	putStrLn ("Input a list of imaginary floats delimited by \",\"")
+	imagFloat <- getLine
+	let realList = splitOn "," realFloat
+	let imagList = splitOn "," imagFloat
+	return (zip (map toFloat realList) (map toFloat imagList))
+toFloat s = (read s :: Float)
 
 --Duplicate the elements in a list and append to the end
 duplicate :: [(Float, Float)] -> [(Float, Float)]
@@ -45,9 +53,23 @@ evenLst (x:xs) = x : (evenLst (if xs == [] then [] else tail xs))
 oddLst [] = []
 oddLst (x:xs) = evenLst xs
 
+--Divide element by n
+divN n = \(a,b) -> (a/n , b/n)
+
+--Round element to the nth decimal
+roundN n = \(a,b) -> ((fromInteger $ round $ a * (10^n)) / (10.0^^n),
+		     (fromInteger $ round $ b * (10^n)) / (10.0^^n))
+
 --Decimation in time Fast Fourier Transform
 fft :: [(Float, Float)] -> [(Float, Float)]
 fft [] = []
-fft x = if (tail x) == [] then x else (addLists (duplicate(fft(evenLst x)))
-	  (mulLists (pitchForkList (length x)) (duplicate(fft(oddLst x)))))
+fft x = map (roundN 3)(if (tail x) == [] then x else (addLists (duplicate(fft(evenLst x)))
+	    (mulLists (pitchForkList (length x)) (duplicate(fft(oddLst x))))))
 
+--Decimation in time Inverse Fast Fourier Transform
+ifft :: [(Float, Float)] -> [(Float, Float)]
+ifft [] = []
+ifft (x:xs) = map (roundN 3)(map (divN (fromIntegral (length (x:xs))::Float))
+		  (fft (x : (reverse xs))))
+
+   
