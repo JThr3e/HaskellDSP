@@ -60,6 +60,12 @@ divN n = \(a,b) -> (a/n , b/n)
 roundN n = \(a,b) -> ((fromInteger $ round $ a * (10^n)) / (10.0^^n),
 		     (fromInteger $ round $ b * (10^n)) / (10.0^^n))
 
+--Find next nearest power of 2
+nextPow2 x = 2^(ceiling(logBase 2 x))
+
+--Create a list of n zeros
+listOfNZeros n = take n (repeat (0.0,0.0))
+
 --Decimation in time Fast Fourier Transform
 fft :: [(Float, Float)] -> [(Float, Float)]
 fft [] = []
@@ -71,5 +77,4 @@ ifft :: [(Float, Float)] -> [(Float, Float)]
 ifft [] = []
 ifft (x:xs) = map (roundN 3)(map (divN (fromIntegral (length (x:xs))::Float))
 		  (fft (x : (reverse xs))))
-
    
