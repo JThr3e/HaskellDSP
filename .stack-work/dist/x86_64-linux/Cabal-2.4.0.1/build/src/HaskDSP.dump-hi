@@ -1,0 +1,435 @@
+
+==================== FINAL INTERFACE ====================
+2018-12-30 17:48:13.957946097 UTC
+
+interface Haskell-DSP-0.1.0.0-FpXWXVgv2YrCyQPupUf2ci:HaskDSP 8063
+  interface hash: 79d287e5c30ed9ca8dbdfb2f63d324cb
+  ABI hash: 85bbcee0119d935913e3f998be271664
+  export-list hash: 5ecb4ddebd4bd6a0df53abc5e8e7ca01
+  orphan hash: 1ac2fa803f8b3823543d5fea04211174
+  flag hash: d59a86fc39dabe8754ebbfb830e37f1e
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  HaskDSP.convolve
+  HaskDSP.fft
+  HaskDSP.ifft
+module dependencies:
+package dependencies: base-4.12.0.0* ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity base-4.12.0.0:Data.Monoid
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Data.Foldable 00188ddf89c975fee76bdfad479443c1
+import  -/  base-4.12.0.0:Data.Tuple c92a835d04b6c075a7031d4e28e53c71
+import  -/  base-4.12.0.0:GHC.Base cc906f98291a1b830546e99a96674547
+import  -/  base-4.12.0.0:GHC.Float b958d4f9aada71a4e6641f5c6bbcbc30
+import  -/  base-4.12.0.0:GHC.List 734a72beb76d276fb4a0ba2689a5711f
+import  -/  base-4.12.0.0:GHC.Num 847723f2584d989dac1eada133ac3fb8
+import  -/  base-4.12.0.0:GHC.Real f7dad82c1d43d80823865d3e6c6636e0
+import  -/  base-4.12.0.0:Prelude 5c01365ec01f83bd405ac01cbb9a8d76
+import  -/  ghc-prim-0.5.3:GHC.Classes e0d9c979f6368701f34fa421754d2cce
+585437999c087ce3de7fa98ef4db7b1e
+  $s$fEq(,) :: GHC.Classes.Eq (GHC.Types.Float, GHC.Types.Float)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Float, GHC.Types.Float)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ GHC.Types.Float
+                     @ GHC.Types.Float
+                     GHC.Classes.$fEqFloat
+                     GHC.Classes.$fEqFloat)
+                  HaskDSP.$s$fEq(,)_$s$fEq(,)_$c/= -}
+780c23adec55a4fc8a8c867595984d8e
+  $s$fEq(,)_$s$fEq(,)_$c/= ::
+    (GHC.Types.Float, GHC.Types.Float)
+    -> (GHC.Types.Float, GHC.Types.Float) -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: (GHC.Types.Float, GHC.Types.Float))
+                   (y :: (GHC.Types.Float, GHC.Types.Float)) ->
+                 case x of wild { (,) a1 a2 ->
+                 case y of wild1 { (,) b1 b2 ->
+                 case GHC.Classes.eqFloat a1 b1 of wild2 {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Classes.eqFloat a2 b2 of wild3 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } } } }) -}
+9e544b69e1a58352b75f074742598b01
+  $s^1 :: GHC.Types.Int
+  {- Strictness: x -}
+40d8efffc08757026ae33cbdf765b344
+  $s^2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+8a9634a9efb3ceb6d65fe0d16ad2edd7
+  $s^4 :: GHC.Types.Float
+  {- Strictness: x -}
+ebe7e927bfb0871fe79c7ef789f4e746
+  $seven1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+172fc93312a65fc5818cceb5d2f0661d
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   HaskDSP.$trModule3
+                   HaskDSP.$trModule1) -}
+ea25387867817bb48f893a899f4c57ed
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS HaskDSP.$trModule2) -}
+77ef39cc4ea9ec5454d379537e7876ab
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("HaskDSP"#) -}
+12ffb3d48d25692b3b0a8b42ff211867
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS HaskDSP.$trModule4) -}
+09ce4eb48709e405ca2f4346a2039d56
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Haskell-DSP-0.1.0.0-FpXWXVgv2YrCyQPupUf2ci"#) -}
+eefda9c48a336c211c8a10a930bdcea9
+  $w$s^ :: GHC.Types.Int -> GHC.Integer.Type.Integer -> GHC.Prim.Int#
+  {- Arity: 2, Strictness: <L,1*U(U)><S,U>, Inline: [1],
+     Unfolding: (\ (w :: GHC.Types.Int)
+                   (w1 :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.ltInteger# w1 HaskDSP.$s^2 of wild {
+                   DEFAULT
+                   -> case GHC.Integer.Type.eqInteger# w1 HaskDSP.$s^2 of wild1 {
+                        DEFAULT -> case w of ww { GHC.Types.I# ww1 -> HaskDSP.$wf ww1 w1 }
+                        1# -> 1# }
+                   1# -> case HaskDSP.$s^1 ret_ty GHC.Prim.Int# of {} }) -}
+f5dc3068fd2064bc48c93863ce919fdf
+  $w$s^1 ::
+    GHC.Types.Float -> GHC.Integer.Type.Integer -> GHC.Prim.Float#
+  {- Arity: 2, Strictness: <L,1*U(U)><S,U>, Inline: [1],
+     Unfolding: (\ (w :: GHC.Types.Float)
+                   (w1 :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.ltInteger# w1 HaskDSP.$s^2 of wild {
+                   DEFAULT
+                   -> case GHC.Integer.Type.eqInteger# w1 HaskDSP.$s^2 of wild1 {
+                        DEFAULT -> case w of ww { GHC.Types.F# ww1 -> HaskDSP.$wf1 ww1 w1 }
+                        1# -> 1.0# }
+                   1# -> case HaskDSP.$s^4 ret_ty GHC.Prim.Float# of {} }) -}
+4608e433ece14319b5cf0c63a57cd849
+  $w$s^^ ::
+    GHC.Types.Float -> GHC.Integer.Type.Integer -> GHC.Prim.Float#
+  {- Arity: 2, Strictness: <L,1*U(U)><S,U>, Inline: [1],
+     Unfolding: (\ (w :: GHC.Types.Float)
+                   (w1 :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.geInteger# w1 HaskDSP.$s^2 of wild {
+                   DEFAULT
+                   -> case HaskDSP.$w$s^1
+                             w
+                             (GHC.Integer.Type.negateInteger w1) of ww { DEFAULT ->
+                      GHC.Prim.divideFloat# 1.0# ww }
+                   1# -> HaskDSP.$w$s^1 w w1 }) -}
+2062c7149a249ab9fd7c618b9a9773ab
+  $w$sroundN ::
+    GHC.Integer.Type.Integer
+    -> GHC.Types.Float
+    -> GHC.Types.Float
+    -> (# GHC.Types.Float, GHC.Types.Float #)
+  {- Arity: 3, Strictness: <L,U><L,1*U(U)><L,1*U(U)>, Inline: [2],
+     Unfolding: (\ (w :: GHC.Integer.Type.Integer)
+                   (ww :: GHC.Types.Float)
+                   (ww1 :: GHC.Types.Float) ->
+                 (# case ww of wild { GHC.Types.F# x ->
+                    case HaskDSP.$w$s^1 HaskDSP.ifft2 w of ww2 { DEFAULT ->
+                    case {__pkg_ccall base-4.12.0.0 GHC.Prim.Float#
+                                                    -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                          GHC.Prim.Float# #)}
+                           (GHC.Prim.timesFloat# x ww2)
+                           GHC.Prim.realWorld# of wild1 { (#,#) ds2 ds3 ->
+                    case GHC.Prim.decodeFloat_Int# ds3 of ds4 { (#,#) ipv ipv1 ->
+                    case GHC.Prim.<# ipv1 0# of lwild {
+                      DEFAULT
+                      -> case GHC.Integer.Type.doubleFromInteger
+                                (GHC.Integer.Type.shiftLInteger
+                                   (GHC.Integer.Type.smallInteger ipv)
+                                   ipv1) of wild2 { DEFAULT ->
+                         case HaskDSP.$w$s^^ HaskDSP.ifft2 w of ww3 { DEFAULT ->
+                         case GHC.Prim.divideFloat#
+                                (GHC.Prim.double2Float# wild2)
+                                ww3 of wild3 { DEFAULT ->
+                         GHC.Types.F# wild3 } } }
+                      1#
+                      -> case HaskDSP.$w$s^^ HaskDSP.ifft2 w of ww3 { DEFAULT ->
+                         case GHC.Prim.divideFloat#
+                                (GHC.Prim.double2Float#
+                                   (GHC.Prim.int2Double#
+                                      (GHC.Prim.uncheckedIShiftRA# ipv (GHC.Prim.negateInt# ipv1))))
+                                ww3 of wild2 { DEFAULT ->
+                         GHC.Types.F# wild2 } } } } } } },
+                    case ww1 of wild { GHC.Types.F# x ->
+                    case HaskDSP.$w$s^1 HaskDSP.ifft2 w of ww2 { DEFAULT ->
+                    case {__pkg_ccall base-4.12.0.0 GHC.Prim.Float#
+                                                    -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                          GHC.Prim.Float# #)}
+                           (GHC.Prim.timesFloat# x ww2)
+                           GHC.Prim.realWorld# of wild1 { (#,#) ds2 ds3 ->
+                    case GHC.Prim.decodeFloat_Int# ds3 of ds4 { (#,#) ipv ipv1 ->
+                    case GHC.Prim.<# ipv1 0# of lwild {
+                      DEFAULT
+                      -> case GHC.Integer.Type.doubleFromInteger
+                                (GHC.Integer.Type.shiftLInteger
+                                   (GHC.Integer.Type.smallInteger ipv)
+                                   ipv1) of wild2 { DEFAULT ->
+                         case HaskDSP.$w$s^^ HaskDSP.ifft2 w of ww3 { DEFAULT ->
+                         case GHC.Prim.divideFloat#
+                                (GHC.Prim.double2Float# wild2)
+                                ww3 of wild3 { DEFAULT ->
+                         GHC.Types.F# wild3 } } }
+                      1#
+                      -> case HaskDSP.$w$s^^ HaskDSP.ifft2 w of ww3 { DEFAULT ->
+                         case GHC.Prim.divideFloat#
+                                (GHC.Prim.double2Float#
+                                   (GHC.Prim.int2Double#
+                                      (GHC.Prim.uncheckedIShiftRA# ipv (GHC.Prim.negateInt# ipv1))))
+                                ww3 of wild2 { DEFAULT ->
+                         GHC.Types.F# wild2 } } } } } } } #)) -}
+e3d79d57fc3ac3c41cae24e3b827be74
+  $wf :: GHC.Prim.Int# -> GHC.Integer.Type.Integer -> GHC.Prim.Int#
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [2] -}
+2cb49b2bdf560f75022e7ce9f61d011c
+  $wf1 ::
+    GHC.Prim.Float# -> GHC.Integer.Type.Integer -> GHC.Prim.Float#
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [2] -}
+089bc8cac5927a749c4f3ab42cd6bdf1
+  $wnextPow2 :: GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 1, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Prim.logFloat#
+                        (GHC.Prim.int2Float# ww) of wild1 { DEFAULT ->
+                 case HaskDSP.convolve5 of v { GHC.Types.F# v1 ->
+                 case GHC.Prim.divideFloat# wild1 v1 of wild4 { DEFAULT ->
+                 case GHC.Prim.decodeFloat_Int#
+                        (GHC.Prim.negateFloat# wild4) of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.Prim.<# ipv1 0# of lwild {
+                   DEFAULT
+                   -> HaskDSP.$w$s^
+                        HaskDSP.convolve3
+                        (GHC.Integer.Type.negateInteger
+                           (GHC.Integer.Type.shiftLInteger
+                              (GHC.Integer.Type.smallInteger ipv)
+                              ipv1))
+                   1#
+                   -> let {
+                        s :: GHC.Prim.Int# = GHC.Prim.negateInt# ipv1
+                      } in
+                      case GHC.Prim.># s 23# of lwild1 {
+                        DEFAULT
+                        -> HaskDSP.$w$s^
+                             HaskDSP.convolve3
+                             (GHC.Integer.Type.negateInteger
+                                (GHC.Integer.Type.smallInteger
+                                   (GHC.Prim.uncheckedIShiftRA# ipv s)))
+                        1#
+                        -> case GHC.Prim.<# ipv 0# of lwild2 {
+                             DEFAULT -> case HaskDSP.convolve4 of v2 { GHC.Types.I# v3 -> v3 }
+                             1#
+                             -> case HaskDSP.convolve1 of v2 { GHC.Types.I# v3 ->
+                                v3 } } } } } } } }) -}
+27f997e487b7e5e7d0506089cf8d2515
+  $wxs :: GHC.Prim.Int# -> [(GHC.Types.Float, GHC.Types.Float)]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m2, Inline: [2] -}
+b3d803ae5fd8be76c69e8ef97cadb120
+  complexMul ::
+    (GHC.Types.Float, GHC.Types.Float)
+    -> (GHC.Types.Float, GHC.Types.Float)
+    -> (GHC.Types.Float, GHC.Types.Float)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(U(U),U(U))><S,1*U(U(U),U(U))>m, Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (GHC.Types.Float, GHC.Types.Float))
+                   (w1 :: (GHC.Types.Float, GHC.Types.Float)) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case w1 of ww3 { (,) ww4 ww5 ->
+                 (case ww1 of wild { GHC.Types.F# x ->
+                  case ww4 of wild1 { GHC.Types.F# y ->
+                  case ww2 of wild2 { GHC.Types.F# y1 ->
+                  case ww5 of wild3 { GHC.Types.F# y2 ->
+                  GHC.Types.F#
+                    (GHC.Prim.plusFloat#
+                       (GHC.Prim.timesFloat# x y)
+                       (GHC.Prim.timesFloat# (GHC.Prim.timesFloat# -1.0# y1) y2)) } } } },
+                  case ww2 of wild { GHC.Types.F# x ->
+                  case ww4 of wild1 { GHC.Types.F# y ->
+                  case ww1 of wild2 { GHC.Types.F# x1 ->
+                  case ww5 of wild3 { GHC.Types.F# y1 ->
+                  GHC.Types.F#
+                    (GHC.Prim.plusFloat#
+                       (GHC.Prim.timesFloat# x y)
+                       (GHC.Prim.timesFloat# x1 y1)) } } } }) } }) -}
+49f6644fbf77420ccefa9a4e99780e04
+  convolve ::
+    [(GHC.Types.Float, GHC.Types.Float)]
+    -> [(GHC.Types.Float, GHC.Types.Float)]
+    -> [(GHC.Types.Float, GHC.Types.Float)]
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: (\ (ds :: [(GHC.Types.Float, GHC.Types.Float)])
+                   (ds1 :: [(GHC.Types.Float, GHC.Types.Float)]) ->
+                 let {
+                   fail :: GHC.Prim.Void# -> [(GHC.Types.Float, GHC.Types.Float)]
+                     <join 1> {- Arity: 1, Strictness: <L,A> -}
+                   = \ (ds2 :: GHC.Prim.Void#)[OneShot] ->
+                     HaskDSP.ifft
+                       (HaskDSP.map2
+                          @ (GHC.Types.Float, GHC.Types.Float)
+                          HaskDSP.complexMul
+                          (HaskDSP.fft
+                             (GHC.Base.++
+                                @ (GHC.Types.Float, GHC.Types.Float)
+                                ds
+                                (case GHC.List.$wlenAcc
+                                        @ (GHC.Types.Float, GHC.Types.Float)
+                                        ds
+                                        0# of ww2 { DEFAULT ->
+                                 case GHC.List.$wlenAcc
+                                        @ (GHC.Types.Float, GHC.Types.Float)
+                                        ds1
+                                        0# of ww1 { DEFAULT ->
+                                 case HaskDSP.$wnextPow2
+                                        (GHC.Prim.-# (GHC.Prim.+# ww2 ww1) 1#) of ww { DEFAULT ->
+                                 let {
+                                   y :: GHC.Prim.Int# = GHC.Prim.-# ww ww2
+                                 } in
+                                 case GHC.Prim.<# 0# y of lwild {
+                                   DEFAULT -> GHC.Types.[] @ (GHC.Types.Float, GHC.Types.Float)
+                                   1# -> HaskDSP.$wxs y } } } })))
+                          (HaskDSP.fft
+                             (GHC.Base.++
+                                @ (GHC.Types.Float, GHC.Types.Float)
+                                ds1
+                                (case GHC.List.$wlenAcc
+                                        @ (GHC.Types.Float, GHC.Types.Float)
+                                        ds
+                                        0# of ww2 { DEFAULT ->
+                                 case GHC.List.$wlenAcc
+                                        @ (GHC.Types.Float, GHC.Types.Float)
+                                        ds1
+                                        0# of ww1 { DEFAULT ->
+                                 case HaskDSP.$wnextPow2
+                                        (GHC.Prim.-# (GHC.Prim.+# ww2 ww1) 1#) of ww { DEFAULT ->
+                                 let {
+                                   y :: GHC.Prim.Int# = GHC.Prim.-# ww ww1
+                                 } in
+                                 case GHC.Prim.<# 0# y of lwild {
+                                   DEFAULT -> GHC.Types.[] @ (GHC.Types.Float, GHC.Types.Float)
+                                   1# -> HaskDSP.$wxs y } } } }))))
+                 } in
+                 case ds of wild {
+                   []
+                   -> case ds1 of wild1 {
+                        [] -> GHC.Types.[] @ (GHC.Types.Float, GHC.Types.Float)
+                        : ipv ipv1 -> fail GHC.Prim.void# }
+                   : ipv ipv1 -> fail GHC.Prim.void# }) -}
+6a89aacef9fbbcc100db0f4edf5c9438
+  convolve1 :: GHC.Types.Int
+  {- Unfolding: (case HaskDSP.$w$s^
+                        HaskDSP.convolve3
+                        HaskDSP.convolve2 of v { DEFAULT ->
+                 GHC.Types.I# v }) -}
+9e0025e2305187f463ef49a898bb916e
+  convolve2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+0f2baf80d55f3b613bf036612c46a569
+  convolve3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+77268263cfdc9abbf1d94be38fea748e
+  convolve4 :: GHC.Types.Int
+  {- Unfolding: (case HaskDSP.$w$s^
+                        HaskDSP.convolve3
+                        HaskDSP.$s^2 of v { DEFAULT ->
+                 GHC.Types.I# v }) -}
+442f8507596eabfd49da367355c2a085
+  convolve5 :: GHC.Types.Float
+  {- Unfolding: (case GHC.Prim.logFloat# 2.0# of v { DEFAULT ->
+                 GHC.Types.F# v }) -}
+a393dccd2c364820e18ce70b17ac3bbc
+  fft ::
+    [(GHC.Types.Float, GHC.Types.Float)]
+    -> [(GHC.Types.Float, GHC.Types.Float)]
+  {- Arity: 1, Strictness: <S,1*U> -}
+69de95c8f07f941a8627e99ca954f219
+  ifft ::
+    [(GHC.Types.Float, GHC.Types.Float)]
+    -> [(GHC.Types.Float, GHC.Types.Float)]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: [(GHC.Types.Float, GHC.Types.Float)]) ->
+                 case ds of wild {
+                   [] -> GHC.Types.[] @ (GHC.Types.Float, GHC.Types.Float)
+                   : x xs
+                   -> GHC.Base.map
+                        @ (GHC.Types.Float, GHC.Types.Float)
+                        @ (GHC.Types.Float, GHC.Types.Float)
+                        (let {
+                           n :: GHC.Types.Float
+                           = case GHC.List.$wlenAcc
+                                    @ (GHC.Types.Float, GHC.Types.Float)
+                                    wild
+                                    0# of ww2 { DEFAULT ->
+                             GHC.Types.F# (GHC.Prim.int2Float# ww2) }
+                         } in
+                         \ (x1 :: (GHC.Types.Float, GHC.Types.Float)) ->
+                         case x1 of wild1 { (,) a b ->
+                         case HaskDSP.$w$sroundN
+                                HaskDSP.ifft1
+                                (case a of wild2 { GHC.Types.F# x2 ->
+                                 case n of wild3 { GHC.Types.F# y ->
+                                 case GHC.Prim.divideFloat# x2 y of wild4 { DEFAULT ->
+                                 GHC.Types.F# wild4 } } })
+                                (case b of wild2 { GHC.Types.F# x2 ->
+                                 case n of wild3 { GHC.Types.F# y ->
+                                 case GHC.Prim.divideFloat# x2 y of wild4 { DEFAULT ->
+                                 GHC.Types.F# wild4 } } }) of ww { (#,#) ww1 ww2 ->
+                         (ww1, ww2) } })
+                        (HaskDSP.fft
+                           (GHC.Types.:
+                              @ (GHC.Types.Float, GHC.Types.Float)
+                              x
+                              (GHC.List.reverse1
+                                 @ (GHC.Types.Float, GHC.Types.Float)
+                                 xs
+                                 (GHC.Types.[] @ (GHC.Types.Float, GHC.Types.Float))))) }) -}
+6f6768ad1c2870c380f17c09eeaa4596
+  ifft1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (3) -}
+9cce2f1e7e5fdb5cf1ceee6ee8dd6c77
+  ifft2 :: GHC.Types.Float
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.F# 10.0#) -}
+9ca466c163485b2addbd48e88e3f4ef1
+  map2 :: (t -> t -> t) -> [t] -> [t] -> [t]
+  {- Arity: 3, Strictness: <L,C(C1(U))><S,1*U><S,1*U> -}
+"SPEC/HaskDSP $fEq(,) @ Float @ Float" [orphan] forall (v1 :: GHC.Classes.Eq
+                                                                GHC.Types.Float)
+                                                       (v :: GHC.Classes.Eq GHC.Types.Float)
+  GHC.Classes.$fEq(,) @ GHC.Types.Float @ GHC.Types.Float v v1
+  = HaskDSP.$s$fEq(,)
+"SPEC/HaskDSP $fEq(,)_$c/= @ Float @ Float" [orphan] forall ($dEq1 :: GHC.Classes.Eq
+                                                                        GHC.Types.Float)
+                                                            ($dEq :: GHC.Classes.Eq GHC.Types.Float)
+  GHC.Classes.$fEq(,)_$c/= @ GHC.Types.Float
+                           @ GHC.Types.Float
+                           $dEq
+                           $dEq1
+  = HaskDSP.$s$fEq(,)_$s$fEq(,)_$c/=
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

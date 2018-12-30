@@ -1,16 +1,7 @@
-# HaskellDSP
-Implementing DSP functions in Haskell
+# Haskell-DSP
 
-Run FFT in Linux by
+Use "stack build" to compile project into executable
 
-cd fft
+Use stack exec Haskell-DSP-exe to run project
 
-./fft
-
-1,1,1,1,1,1,1,1 (for example)
-
-TODO:
--inverse fft 
--convolution 
--image processing  
 
